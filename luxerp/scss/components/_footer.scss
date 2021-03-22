@@ -1,0 +1,15 @@
+.luxerp-footer {
+  padding: 0 0 4rem 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  &__item {
+    margin: 0.5rem 4rem;
+    font-family: $medium;
+
+    &:hover {
+      color: $text;
+    }
+  }
+}

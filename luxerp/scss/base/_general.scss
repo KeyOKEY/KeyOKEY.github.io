@@ -1,0 +1,70 @@
+// Typeface
+.luxerp__text-extrabold {
+  font-family: $extrabold
+}
+
+.luxerp__text-bold {
+  font-family: $bold;
+}
+
+.luxerp__text-semibold {
+  font-family: $semibold
+}
+
+.luxerp__text-medium {
+  font-family: $medium
+}
+
+.luxerp__text-regular {
+  font-family: $regular;
+}
+
+// Buttons
+.luxerp-btn {
+  font-family: $semibold;
+  border: 3px solid #FCAD00;
+  border-radius: 10px;
+  padding: 1rem 2rem;
+  color: #FCAD00;
+  transition: all 200ms ease;
+
+  &_lg {
+    padding: 16px 44px;
+    border-width: 2px;
+    font-size: 1.2rem;
+  }
+
+  &_xl {
+    padding: 20px 44px;
+    border-width: 2px;
+    font-size: 1.2rem;
+  }
+
+  &_light {
+    border-color: transparent;
+
+    &:hover {
+      box-shadow: 0px 22px 46px rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  &_active {
+    color: #ffffff;
+    background: linear-gradient(266.8deg, #FDB500 0%, #FCA400 100%);
+    box-shadow: 0px 4px 28px rgba(252, 173, 0, 0.43);
+
+    * {
+      fill: #ffffff;
+    }
+
+    &:hover {
+      box-shadow: 0px 8px 56px rgba(252, 173, 0, 0.5);
+    }
+  }
+}
+
+// General
+
+h1 {
+  font-size: 3.2rem;
+}

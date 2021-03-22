@@ -1,0 +1,74 @@
+//  Variables section
+$fontsize: 15px;
+$lineheight: 1.65;
+$systemfont: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+
+$userfont: "Montserrat-regular";
+
+$grid-gutter-width: 24px;
+$gutter: $grid-gutter-width;
+
+// Colors
+$text: #262626;
+$text-light: #929292;
+$text-ultra-light: #E6E7EC;
+$text-dark: #181818;
+
+$accent: #FCAD00;
+$accent-2: #FFA300;
+$accent-gradient: linear-gradient(79.55deg, #F88E26 0%, #FFB800 100%);
+
+$dark: #444444;
+$blue-gray: #607d8b;
+$gray: #bdbdbd;
+$dark-gray: #b3b3b3;
+$deep-gray: #a9a9a9;
+$light: #f4f5fd;
+$white: #ffffff;
+
+$teal: #009688;
+$cyan: #00bcd4;
+$light-blue: rgb(33, 150, 243);
+$blue: rgb(12, 131, 225);
+$dark-blue: rgb(11, 120, 206);
+
+$deep-blue: #3f51b5;
+$deep-purple: #673ab7;
+$purple: #9c27b0;
+$pink: #e91e63;
+$red: #f44336;
+$dark-red: #f33223;
+
+$green: #1bc943;
+$dark-green: #19b83d;
+$light-green: #8bc34a;
+
+$brown: #795548;
+$deep-orange: #ff5722;
+$orange: #ff9800;
+$amber: #ffc107;
+$yellow: #ffeb3b;
+$lime: #cddc39;
+
+// Shadows
+$shadow-sm: 0 0 10px rgba(104, 108, 128, 0.05);
+
+// Fonts
+$extrabold: "Montserrat-extrabold";
+$semibold: "Montserrat-semibold";
+$medium: "Montserrat-medium";
+$regular: "Montserrat-regular";
+$bold: "Montserrat-bold";
+
+@mixin font($fname, $url) {
+  @font-face {
+    font-family: $fname;
+    src: url($url) format("truetype");
+  }
+}
+
+@include font($regular, "../assets/fonts/Montserrat/Montserrat-Regular.ttf");
+@include font($semibold, "../assets/fonts/Montserrat/Montserrat-SemiBold.ttf");
+@include font($extrabold, "../assets/fonts/Montserrat/Montserrat-ExtraBold.ttf");
+@include font($medium, "../assets/fonts/Montserrat/Montserrat-Medium.ttf");
+@include font($bold, "../assets/fonts/Montserrat/Montserrat-Bold.ttf");

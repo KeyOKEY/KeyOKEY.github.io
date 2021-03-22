@@ -1,0 +1,39 @@
+@import "node_modules/bootstrap/scss/bootstrap-grid";
+@import "node_modules/bootstrap/scss/mixins/breakpoints";
+@import "node_modules/bootstrap/scss/bootstrap-reboot";
+//@import "node_modules/bootstrap/scss/bootstrap.scss";
+
+html {
+  font-size: $fontsize;
+}
+
+@include media-breakpoint-down(lg) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@include media-breakpoint-down(md) {
+  html {
+    font-size: 13px;
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  html {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 321px) {
+  html {
+    font-size: 12px;
+  }
+}
+
+body {
+  font-family: $userfont, $systemfont;
+  color: $text;
+  overflow-x: hidden;
+  background: #150C00;
+}

@@ -1,0 +1,275 @@
+.luxerp-main {
+  height: 100vh;
+  max-height: 1080px;
+  width: 100%;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background: url("../assets/images/img_6.png");
+  background-position: left top;
+  background-size: cover;
+
+  &_donation {
+    min-height: 100vh;
+    max-height: none;
+    background: url("../assets/images/img_7.png");
+    background-position: left top;
+    background-size: cover;
+
+    .luxerp-main__start {
+      margin-top: 8rem;
+    }
+  }
+
+  &__start {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+
+    &-title {
+      margin-bottom: 4.5rem;
+      color: #ffffff;
+    }
+
+    &-btn {
+      font-size: 1.4rem;
+
+      &:hover {
+        color: #ffffff;
+      }
+    }
+
+    &-slider {
+      position: absolute;
+      right: 5%;
+      bottom: 0;
+      z-index: 1;
+      height: 80%;
+      max-width: 800px;
+      display: flex;
+      overflow: hidden;
+
+      .uk-visible-toggle {
+        -webkit-tap-highlight-color: transparent;
+      }
+
+      .uk-slideshow-items {
+        position: relative;
+        z-index: 0;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        overflow: hidden;
+        -webkit-touch-callout: none;
+
+        display: flex;
+        flex-grow: 1;
+      }
+
+      .uk-slideshow {
+        -webkit-tap-highlight-color: transparent;
+        display: flex;
+        flex-grow: 1;
+        overflow: hidden;
+      }
+
+      .uk-slideshow-items > * {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        overflow: hidden;
+        will-change: transform, opacity;
+        touch-action: pan-y;
+      }
+
+      .uk-slideshow-items > :focus {
+        outline: none;
+      }
+
+      .uk-slideshow-items > :not(.uk-active) {
+        display: none;
+      }
+    }
+
+    &-goods {
+
+      &__title {
+        color: $accent;
+        letter-spacing: 8px;
+        font-size: 1.4rem;
+        margin: 4rem 0;
+      }
+
+      &__items {
+        display: flex;
+      }
+
+      &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        border-radius: 10px;
+        background: #FCAD00;
+        min-width: 150px;
+        height: 175px;
+        padding: 1.5rem 0;
+
+        position: relative;
+
+        & + & {
+          margin-left: 2.2rem;
+        }
+
+        &-title {
+          color: #180F04;
+          font-size: 1.4rem;
+          font-family: $bold;
+          margin-top: auto;
+        }
+
+        &-badge {
+          position: absolute;
+          top: -15px;
+          right: -15px;
+          padding: 0.3rem 0.8rem;
+          background: #FFFFFF;
+          color: #262626;
+          font-family: $semibold;
+          border-radius: 10px;
+        }
+      }
+    }
+
+    &__form-group {
+
+      &__item {
+        border-radius: 10px;
+        border: 2px solid #FFFFFF;
+        padding: 1rem 2rem;
+        color: #FFFFFF;
+        font-size: 1.2rem;
+        letter-spacing: 4px;
+        transition: all 200ms;
+        width: 100%;
+
+        & + & {
+          margin-top: 1rem;
+        }
+
+        &:hover, &:focus {
+          border-color: $accent;
+        }
+      }
+
+      &__select {
+        max-width: 100%;
+        background: transparent;
+        color: #FFFFFF;
+        font-size: 1.2rem;
+        letter-spacing: 4px;
+        padding-right: calc(2rem + 11px);
+
+        &-wrapper {
+          position: relative;
+
+          svg {
+            position: absolute;
+            top: calc((50% - 1rem) + 8px);
+            right: 2rem;
+          }
+        }
+      }
+
+      &__btn {
+        border-radius: 10px;
+        padding: 1rem 5rem;
+        font-size: 1.2rem;
+        transition: all 200ms;
+        background: $accent;
+        display: block;
+        margin: 1.5rem 0 0 auto;
+        font-family: $semibold;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-down(xl) {
+  .luxerp-main {
+    &__start {
+      &-goods {
+        &__items {
+          justify-content: space-between;
+          flex-wrap: wrap;
+          margin-bottom: 2rem;
+          margin: 0 -0.5rem;
+        }
+
+        &__item {
+          width: calc(50% - 1rem);
+          margin: 0.5rem !important;
+        }
+      }
+    }
+  }
+}
+
+@include media-breakpoint-down(lg) {
+  .luxerp-main {
+
+    &__start {
+      text-align: center;
+
+      &__form-group {
+        margin: 2rem 0 4rem 0;
+
+        &__btn {
+          width: 100%;
+        }
+      }
+
+      &-goods {
+        &__item {
+          width: calc(50% - 1rem);
+          margin: 0.5rem !important;
+
+          &-badge {
+            right: -8px;
+          }
+        }
+      }
+    }
+
+    &__start-slider {
+      display: none;
+    }
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .luxerp-main {
+    height: 100vh;
+  }
+}
+
+@media screen and (max-width: 321px) {
+  .luxerp-main {
+    &__start {
+      &-goods {
+        &__item {
+          width: 100%;
+          margin-top: 1.5rem !important;
+
+          &-badge {
+            right: -5px;
+          }
+        }
+      }
+    }
+  }
+}
